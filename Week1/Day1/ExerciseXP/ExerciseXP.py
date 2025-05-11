@@ -5,7 +5,7 @@ print("Hello world" * 4)
 
 # Exercise 2
 
-ex2 = str((99^3)*8)
+ex2 = str((99**3)*8)
 print(ex2)
 
 # Exercise 3
@@ -52,7 +52,7 @@ if a>b:
 ex7 = int(input ("Choose a number: "))
 
 if ex7 %2 == 0:
-    print("This is an odd number.")
+    print("This is an even number.")
 
 # Exercise 8
 
