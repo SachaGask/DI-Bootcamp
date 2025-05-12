@@ -1,0 +1,13 @@
+URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week1/Day1/ExerciseXP/ExerciseXP.py
+suggestions for improvement:
+- Exercise 2: The `^` operator in Python is a bitwise XOR, not exponentiation. Use `**` for exponentiation.
+- Exercise 3: The code provides the correct answers as comments; however, it would be better to print the results programmatically for a more automated solution.
+- Exercise 7: The output message is incorrect.  If the number is even, it should print 'This is an even number.', not 'This is an odd number'.
+- Exercise 8:  The code has two exercise 8 sections. It should only have one.  Additionally, the message for a name mismatch could be improved, there should be a separate conditional for the user providing the same name as the programmer.
+- Exercise 9: The code is correct, but the messages could be more descriptive or user-friendly.
+Brief justification:
+- correctness: Most exercises are correct. Exercise 2 uses the wrong operator for exponentiation. Exercise 7 has an incorrect output message. Exercise 8 is duplicated and the messaging could be improved and Exercise 9 is functionally correct but could have improved messages.
+- readability: The code is generally well-formatted and easy to follow. Variable names are mostly descriptive.  The comments in Exercise 3 make it a bit less readable, it would be cleaner to execute those tests within the code directly instead of as comments.
+- performance: The code's performance is adequate for these simple exercises. No significant performance issues are present.
+- security: No security concerns are present in this code.
+
