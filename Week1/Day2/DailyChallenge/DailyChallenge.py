@@ -16,3 +16,4 @@ for i in range(len(chaine)):
     if i == 0 or chaine[i] != chaine[i-1]:
         chaine_modifiee += chaine[i]
 print(chaine_modifiee)
+
