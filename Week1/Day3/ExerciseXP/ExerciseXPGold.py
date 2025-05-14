@@ -49,3 +49,4 @@ for fruit, inventory in items.items():
     totalprice = items[fruit]["price"] * items[fruit]["stock"]
     total += totalprice
 print(total)
+
