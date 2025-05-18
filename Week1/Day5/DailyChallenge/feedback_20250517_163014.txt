@@ -1,0 +1,12 @@
+URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week1/Day5/DailyChallenge/DailyChallenge1.py
+suggestions for improvement:
+- Challenge 1: The loop used to reconstruct the comma-separated string is unnecessarily complex.  A more efficient and readable approach is to use the `join()` method.  The variable names could be more descriptive. 
+- Challenge 2: The code correctly identifies the longest word. However, the variable names (`record`, `vainqueur`) are not very descriptive and should be improved for better readability. Consider adding error handling for edge cases, such as an empty input string.
+- Both Challenges: Add docstrings to functions to explain their purpose, parameters, and return values. This significantly improves readability and maintainability.
+- Challenge 1: The comments in French should be translated to English for better accessibility. The code is unnecessarily verbose; it could be shortened using the `join()` method.
+Brief justification:
+- correctness: Challenge 1 mostly works correctly, producing the alphabetically sorted comma-separated string. However, the implementation is unnecessarily convoluted.  Challenge 2 correctly identifies the longest word in a sentence, fulfilling the chapter's requirements. The handling of punctuation within words is accurate.  The score is slightly reduced due to the lack of robust error handling (e.g., empty input).
+- readability: The code's readability is hampered by the inefficient looping in Challenge 1 and the use of non-descriptive variable names (e.g., `vainqueur`, `record`). The comments in French in Challenge 1 also detract from readability for English-speaking readers. The code lacks docstrings, which would significantly improve understanding.
+- performance: The algorithm for Challenge 2 is efficient, with a single pass through the words. Challenge 1's performance could be improved significantly by replacing the loop with the `join()` method. The current implementation has a time complexity that grows linearly with the number of words, but using `join()` will be even more efficient.
+- security: There are no apparent security vulnerabilities in the provided code. The code only interacts with user input through the `input()` function, and no external data sources or potentially unsafe operations are involved.
+
