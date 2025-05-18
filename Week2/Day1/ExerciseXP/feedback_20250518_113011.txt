@@ -1,0 +1,12 @@
+URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week2/Day1/ExerciseXP/ExerciseXP.py
+suggestions for improvement:
+- Implement the `get_animals()` method in the `Zoo` class to print the list of animals.
+- Add error handling to the `sell_animal` method.  What happens if the animal isn't found?  Consider raising an exception or returning a boolean value to indicate success or failure.
+- In `sort_animals()`, consider using the `defaultdict` from the `collections` module to avoid the `if first_letter in sorted_dict` check. This simplifies the code and makes it slightly more efficient. 
+- The code for exercises 1,2, and 3 are incomplete and should be implemented according to the exercise instructions.  The current code provides partial solutions or is missing entirely.
+Brief justification:
+- correctness: Exercise 4's `Zoo` class correctly implements `add_animal`, `sell_animal`, `sort_animals`, and `get_groups`.  However,  `get_animals()` is missing, which is a key requirement to display the animals in the zoo.  The other exercises (1, 2, 3) are not fully implemented according to the problem statements.  Therefore, a score of 90% is given, acknowledging the partially correct implementation but deducting points for incomplete functionality.  
+- readability: The code is generally readable.  Variable names are mostly descriptive.  However,  the addition of comments would improve understanding and maintainability.  The code would benefit from more whitespace to improve readability and visual clarity.   The missing methods in exercises 1, 2, and 3 also detract from the overall readability score.
+- performance: The algorithm for sorting animals is efficient (O(n log n) due to `sorted()`). The code doesn't contain any obvious performance bottlenecks.  The use of lists and dictionaries is appropriate for the tasks.  The `defaultdict` suggestion in the feedback would yield a small performance gain.
+- security: There are no apparent security vulnerabilities in the provided code.  Input validation is not needed given the context of the exercises.
+

@@ -1,0 +1,10 @@
+URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week1/Day1/DailyChallenge/DailyChallenge.py
+suggestions for improvement:
+- The code could be slightly improved by using f-strings for better readability in the print statements.
+- Adding more descriptive variable names (e.g., instead of `input`, use `user_string`) would enhance readability.
+Brief justification:
+- correctness: The code perfectly implements all the requirements mentioned in the Chapter Content/Questions. It accurately checks the string length, prints the first and last characters if the length is correct, constructs the string character by character using a for loop, and includes the bonus feature of shuffling the string using `random.sample`.  All functionalities (input, length check, character printing, incremental string building, and string shuffling) directly correspond to the chapter's instructions.
+- readability: The code is generally well-structured and easy to follow. However, using f-strings for string formatting would make the print statements more concise and readable.  More descriptive variable names would further improve readability.
+- performance: The code's performance is efficient. The loops and string manipulations are straightforward and have a time complexity that scales linearly with the string length.  There are no unnecessary computations or inefficient algorithms used.
+- security: The code doesn't have any apparent security vulnerabilities. It only performs basic string operations and uses the `random` library in a safe manner. There's no user input that's directly used in a way that could create vulnerabilities.
+
