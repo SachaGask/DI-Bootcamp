@@ -13,6 +13,11 @@
 # liste.sort()    → Trier la liste sur place (modifie la liste)
 # sorted(liste)  → Retourne une nouvelle liste triée (sans modifier l’originale)
 # elements.split()   → Diviser une chaîne de caractères en liste (par défaut sur les espaces)
+# liste.insert(index, "element")    → Insère element à la position index sans supprimer les autres éléments
+# liste.count("element")    → Compte directement le nombre d’occurrences de l'élément "élément"
+# liste.upper()    → Modifie une liste ou un élément de minuscule à majuscule
+# liste.lower()    → Modifie une liste ou un élément de majuscule à minuscule
+# liste.join(" ")   → Concane une liste en la séparant avec un élement (comme un espace)
 
 # TUPLES
 
