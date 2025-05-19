@@ -18,6 +18,8 @@
 # liste.upper()    → Modifie une liste ou un élément de minuscule à majuscule
 # liste.lower()    → Modifie une liste ou un élément de majuscule à minuscule
 # liste.join(" ")   → Concane une liste en la séparant avec un élement (comme un espace)
+# set(liste)    → Élimine les doublons
+# random.choice(liste)    → Tire au hasard un élément d'une liste
 
 # TUPLES
 
