@@ -1,0 +1,8 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week2/Day2/ExerciseXP/ExerciseXP.py
+suggestions for improvement:
+- **Exercise 1:** The `Siamese` class is correctly created but lacks added attributes or methods as suggested in the instructions.  More descriptive names for variables (e.g., `all_cats` to `saras_cats`) improve readability.
+- **Exercise 2:** The `Dog` class is implemented correctly, fulfilling all requirements.  The fight method could be improved by using a more sophisticated win condition (e.g., incorporating a random element to represent fighting uncertainty).
+- **Exercise 3:** The `PetDog` class largely meets the requirements. However, the `play` method's handling of `*args` could be simplified. The `do_a_trick` method correctly uses `random.choice`. Consider adding error handling if the list of tricks is empty.
+- **Exercise 4:**  The Family class is not correctly implemented. The `born` method should be an instance method, not a class method. The `check_majority` and `family_presentation` methods are also not aligned with what was asked.  The `last_name` should be set during object creation instead of being a class-level attribute. The logic in `is_18` is partially correct (it prints the messages but doesn't always return a boolean), and doesn't handle case where the person isn't found.
+Correctness: 75%
+-----
