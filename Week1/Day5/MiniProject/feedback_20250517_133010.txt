@@ -1,0 +1,11 @@
+URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week1/Day5/MiniProject/MiniProject1.py
+suggestions for improvement:
+- The code lacks functions as specified in the instructions.  The `display_board`, `player_input`, and `check_win` functionalities should be encapsulated in separate functions for better organization and readability.
+- Improve the user experience by displaying the board with numbered rows and columns to make it easier for players to input their moves.
+- Add a check for a tie game condition *before* checking for a win in each iteration to slightly improve efficiency.
+Brief justification:
+- correctness: The code correctly implements the Tic-Tac-Toe game logic. It handles player input, updates the board, checks for wins and draws, and switches between players.  However, it doesn't strictly adhere to the instructions regarding the use of separate functions. The core game functionality is present and works as expected, thus receiving a high score.
+- readability: The code is mostly readable but could be significantly improved by refactoring into functions as outlined in the instructions. The current structure makes it harder to follow the flow and makes testing and maintenance more difficult.  The lack of descriptive variable names also impacts readability.
+- performance: The code's performance is acceptable for a simple Tic-Tac-Toe game. The algorithm is efficient in checking for wins.  Minor improvements can be made by optimizing the win/draw check sequence as suggested in the feedback section, though the current performance is not significantly problematic.
+- security: The code is secure as it doesn't involve any external inputs or resources that could lead to vulnerabilities. The input validation within the `while True` loop prevents common errors and unexpected behaviors.
+
