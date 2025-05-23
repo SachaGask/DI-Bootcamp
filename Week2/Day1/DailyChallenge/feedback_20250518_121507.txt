@@ -1,0 +1,11 @@
+URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week2/Day1/DailyChallenge/DailyChallenge.py
+suggestions for improvement:
+- The `get_info` method's output doesn't perfectly match the example's formatting.  The example shows aligned columns, which this code lacks. Consider using f-strings with formatting specifiers (e.g., `{animal:<10} : {count}`) for better alignment.
+- Add the bonus features: `get_animal_types` and `get_short_info` methods as specified in the instructions.
+- Add docstrings to the methods for better readability and explain what each method does and parameters are used for.
+Brief justification:
+- correctness: The code correctly implements the `Farm` class, `__init__`, `add_animal`, and `get_info` methods.  It accurately adds animals, updates counts, and returns a string showing the farm's name and animal counts. The formatting in `get_info` is slightly off compared to the example but functionally correct. The bonus features are missing, hence the 95% score.
+- readability: The code is well-structured and easy to follow. The use of descriptive variable names enhances readability. However, adding docstrings and addressing the formatting issue in `get_info` would further improve readability.
+- performance: The code's performance is excellent for this task. The dictionary operations are efficient, and there are no unnecessary computations.
+- security: There are no security concerns in this code; it only deals with string manipulation and data storage in a dictionary. It does not interact with external systems or handle user inputs that could pose security risks.
+

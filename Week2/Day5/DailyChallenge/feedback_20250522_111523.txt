@@ -1,0 +1,20 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week2/Day5/DailyChallenge/anagram_checker.py
+suggestions for improvement:
+- The `AnagramChecker` class should not print anything within its methods.  The `is_valid_word` method currently prints messages.  These should be removed and handled by the UI (`anagrams.py`).
+- The `anagrams.py` file, responsible for the user interface, is missing.  The provided code only shows a basic usage of `AnagramChecker`.
+- Error handling is minimal. The program should handle file not found exceptions and gracefully handle invalid user input (e.g., non-alphabetic characters).
+- The `get_anagrams` method reads the entire word list into memory every time it's called. This is inefficient for large word lists. Consider loading the word list once in the `__init__` method and storing it in a data structure optimized for searching (like a set).
+- The code lacks proper input validation for user input in `anagrams.py` (which is missing).  It should check for multiple words and non-alphabetic characters.
+- Add comments to clarify the purpose of different code sections.
+Correctness: 85%
+-----
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week2/Day5/DailyChallenge/anagrams.py
+suggestions for improvement:
+- The `anagram_checker.py` file is missing, making a complete assessment impossible.  The provided code only shows the `anagrams.py` file which depends on another file.
+- Error handling could be improved. Instead of just printing 'Invalid option', provide more specific guidance to the user.
+- The program could benefit from more robust input validation (e.g., handling empty input).
+- Consider adding a progress indicator or other feedback to the user if the anagram search takes a long time for very large word lists.
+- The use of `.lower()` after getting anagrams is redundant if the `get_anagrams` function already handles case insensitivity correctly.
+- The code assumes the `sowpods.txt` file is in the same directory. Handle potential `FileNotFoundError`.
+Correctness: 95%
+-----
