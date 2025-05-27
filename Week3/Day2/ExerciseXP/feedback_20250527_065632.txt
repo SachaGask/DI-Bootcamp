@@ -1,0 +1,22 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week3/Day2/ExerciseXP/index.html
+suggestions for improvement:
+- Exercise 1: Implement the bonus feature to allow for different divisors.
+- Exercise 2: Implement the bonus feature to decrease stock when an item is purchased.
+- Exercise 3: The code is missing.  Add the `changeEnough` function.
+- Exercise 4: The code is missing. Implement all four functions (`hotelCost`, `planeRideCost`, `rentalCarCost`, `totalVacationCost`) and handle user input gracefully (error handling, data type validation). Consider using prompts or input fields for user interaction. Implement the bonus feature of consolidating prompts within `totalVacationCost`.
+- Exercise 5:  The JavaScript code to manipulate the DOM is missing. Implement all parts (changing text, adding/removing elements, adding classes, styling, etc.). The bonus part about alerting the users needs to be added.
+- Exercise 6: The JavaScript code is missing. Implement all parts (changing the ID, adding the logout item, retrieving and displaying the first and last list items).
+- Exercise 7: The code is missing. Implement the creation of the `allBooks` array and the rendering of books in the DOM, with the styling as requested.
+Correctness: 70%
+-----
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week3/Day2/ExerciseXP/script.js
+suggestions for improvement:
+- **Exercise 1:** The `displayNumbersDivisible` function works correctly for the base case and the bonus. However, the output is not exactly as specified (the numbers are printed on separate lines rather than a single line).  Add a separator or use `join` for the output of the numbers.
+- **Exercise 2:** The `myBill` function correctly calculates the total and reduces stock, fulfilling all requirements including the bonus. Good job!
+- **Exercise 3:** The `changeEnough` function is mostly correct, but it incorrectly handles the change calculation. It should sum up the change based on quantity and denomination.  The current implementation multiplies the quantity with the denomination, leading to incorrect results. 
+- **Exercise 4:** The functions `hotelCost`, `planeRideCost`, and `rentalCarCost` use prompts which is not a best practice for larger applications. The bonus requirement suggests moving all prompts to `totalVacationCost`.  The input validation is good. 
+- **Exercise 5:**  The DOM manipulation in Exercise 5 is mostly correct, successfully addressing most requirements.  However, the bonus requirement to alert users based on div background is not implemented. 
+- **Exercise 6:** This exercise is well-done.  It correctly uses `setAttribute`, `createElement`, `appendChild`, `firstElementChild`, `lastElementChild`, and `textContent`. 
+- **Exercise 7:** This exercise is not implemented in the provided code.
+Correctness: 75%
+-----
