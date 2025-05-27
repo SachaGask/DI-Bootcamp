@@ -1,0 +1,15 @@
+URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week1/Day4/ExerciseXP/ExerciseXP.py
+suggestions for improvement:
+- **Exercise 1:** The code is commented out.  Uncomment and ensure the output matches the chapter's expected output.
+- **Exercise 2:** The code is commented out. Uncomment it. The wording is slightly different than what's expected in the chapter, but functionally correct. Consider aligning the wording.
+- **Exercise 3:** The code is commented out. Uncomment it.  The function works correctly, using the default parameter, but the example calls need to match the expected output in the chapter.
+- **Exercise 4:** The code is commented out. Uncomment it. The function is named `choix` instead of the suggested name. Rename it. The output messages don't exactly match the chapter's description. Adjust wording to match expectations.
+- **Exercise 5:** The code is commented out. Uncomment it. The function and calls are correct, matching the chapter's requirements.
+- **Exercise 6:** The code is commented out. Uncomment it. The `make_great` function prints the modified names instead of modifying the list in place, as required by the chapter.  The `show_magicians` function should then be called to display the modified list. 
+- **Exercise 7:** The code is commented out. Uncomment it. The `get_random_temp` function doesn't actually return a random number.  It needs a `return` statement. The `main` function takes `get_random_temp` as an argument but doesn't call it; it should receive the return value from `get_random_temp`. The conditional statements for the temperature advice are good.  However, the bonus requirements (floating-point numbers and season-based temperatures) are not implemented.
+Brief justification:
+- correctness: Many exercises are implemented correctly, but several are either incomplete or don't strictly adhere to the instructions (Exercise 6 and Exercise 7). Some functions are missing `return` statements where needed.  Several commented out solutions make it difficult to provide a full assessment. The overall accuracy is around 70% because of these issues.
+- readability: The code is generally readable and well-formatted. Function names are mostly descriptive, and variable names are clear in most cases. The use of f-strings enhances readability. The score is slightly lowered because of inconsistent function naming and missing docstrings for functions.
+- performance: The code's performance is good for the given tasks.  There are no significant performance bottlenecks. The use of simple functions and algorithms results in efficient code execution.
+- security: There are no security concerns in this code. It's purely functional and does not involve external inputs or interactions that could introduce vulnerabilities.
+

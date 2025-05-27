@@ -1,0 +1,34 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week2/Day5/DailyChallenge/anagram_checker.py
+suggestions for improvement:
+- The code implements an anagram finder, not a Rock Paper Scissors game as specified in the Chapter Content/Questions.  The provided instructions detail building a game with a menu, score tracking, and interaction with a computer opponent. This code solves a completely different problem.
+- The `is_valid_word` function prints to the console instead of returning a boolean value, making it less versatile for use in other parts of a program.
+- The `get_anagrams` function reads the entire word list into memory. For very large word lists, this could be inefficient. Consider using generators or iterators to process the file line by line, improving performance.
+- Error handling (e.g., what happens if the file isn't found) is missing.  The program should gracefully handle potential exceptions.
+Correctness: 80%
+-----
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week2/Day5/DailyChallenge/anagrams.py
+suggestions for improvement:
+- The code does not implement a Rock Paper Scissors game as specified in the Chapter Content/Questions. It implements an anagram checker.
+- The `anagram_checker.py` module is not provided, making it impossible to assess its correctness.
+- Error handling is good, especially input validation.
+- The menu system in the provided code is clear and easy to use.  This aspect is readable and well-structured.
+- Performance could be improved by optimizing the anagram search algorithm (if implemented efficiently in `anagram_checker.py`).
+Correctness: 0%
+-----
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week2/Day5/DailyChallenge/game.py
+suggestions for improvement:
+- The `rock-paper-scissors.py` file and the menu/score tracking functionality are missing.  The instructions clearly specify creating this file and implementing functions like `get_user_menu_choice`, `print_results`, and `main` to handle the menu, score tracking, and game loop.  This is a major omission.
+- The game uses French terms ('pierre', 'papier', 'ciseaux'). While not explicitly wrong, the instructions don't specify a language, and English terms would be more broadly accessible.
+- Error handling could be improved. While the `get_user_item` method handles invalid input, more robust error handling might consider case-insensitive input or handling unexpected input types more gracefully.
+- Add a clear separation between the game logic and the user interface. The current code mixes both aspects.  The `Game` class should focus solely on game mechanics.  The UI interaction should reside in `rock-paper-scissors.py`.
+Correctness: 90%
+-----
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week2/Day5/DailyChallenge/rock-paper-scissors.py
+suggestions for improvement:
+- The `Game` class in `game.py` is missing and needs to be implemented according to the instructions.  It should include methods `get_user_item`, `get_computer_item`, `get_game_result`, and `play`.
+- The `play` method in the `Game` class should return 'win', 'loss', or 'draw', not a custom string like 'Gagné'.  The `main` function needs to be updated to handle these strings correctly.
+- Input validation in `get_user_menu_choice` is good, but error messages could be more user-friendly.
+- The `print_results` function is called twice when the user quits. This is redundant and should be simplified.
+- The code uses French words ('Gagné', 'Perdu', 'Égalité'). It should use English ('win', 'loss', 'draw') to match the chapter instructions.
+Correctness: 85%
+-----
