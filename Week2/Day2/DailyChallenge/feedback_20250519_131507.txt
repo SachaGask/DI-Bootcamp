@@ -1,0 +1,12 @@
+URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week2/Day2/DailyChallenge/DailyChallenge.py
+suggestions for improvement:
+- Implement the `go_to_page`, `first_page`, `last_page`, `next_page`, and `previous_page` methods as specified in the instructions.  These methods are missing from the provided code.
+- Add error handling in `go_to_page` to raise a `ValueError` if `page_num` is out of range.
+- Implement the `__str__` method to return a string representation of the current page's items, each on a new line.
+- The `get_visible_items` method should handle the case where `self.current_idx` is beyond the last page or is negative gracefully (returning an empty list or raising an appropriate exception).
+Brief justification:
+- correctness: The provided code correctly implements the `__init__` and `get_visible_items` methods. However, it's missing crucial navigation methods (`go_to_page`, `first_page`, `last_page`, `next_page`, `previous_page`) and the `__str__` method, which are explicitly required in the chapter content.  The error handling in `go_to_page` is also missing.  The score reflects the partial completion of the requirements.
+- readability: The code is well-structured and easy to understand. Variable names are descriptive, and the logic within the existing methods is clear and concise.  The use of comments would improve readability further.
+- performance: The performance of the provided code is efficient. The use of list slicing for `get_visible_items` is optimal for retrieving a subset of the items list.  There are no unnecessary computations or inefficient algorithms.
+- security: The code does not contain any obvious security vulnerabilities.  The input validation is incomplete (missing in `go_to_page`) but no direct security risks are present in the given code.
+

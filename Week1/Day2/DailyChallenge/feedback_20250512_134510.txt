@@ -1,0 +1,13 @@
+URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week1/Day2/DailyChallenge/DailyChallenge.py
+suggestions for improvement:
+- Challenge 1: The first challenge's code is incomplete. It prints the multiples to the console instead of returning them as a list as required.  It should create a list and return that list.
+- Challenge 1: The variable names (`input1`, `input2`) aren't descriptive. Use names like `number` and `length`.
+- Challenge 1:  Error handling is missing. The code should handle non-integer inputs gracefully.
+- Challenge 2: The code for Challenge 2 is functional and meets the requirements, but it could be made slightly more concise and readable.
+- Challenge 2: The use of French comments and input prompt reduces readability for an English-speaking audience.  Use English for all comments and prompts.
+Brief justification:
+- correctness: Challenge 1's code has a logic error; it doesn't produce a list as specified in the chapter. It only prints the multiples. Challenge 2's code correctly removes consecutive duplicate letters, fulfilling the requirements of that challenge.  The score is 80% because Challenge 1 is partially correct but needs significant revisions.
+- readability: The variable names in Challenge 1 are not descriptive (input1, input2). The use of French in Challenge 2 reduces readability.  The code in Challenge 2 could be slightly more concise. The overall readability is acceptable but could be improved.
+- performance: The performance of both solutions is good.  Both have a time complexity that is linear to the input size. There are no obvious performance bottlenecks.
+- security: There are no apparent security vulnerabilities in the provided code. The code only uses input from the user and processes it directly; there is no external data access or sensitive operations.
+

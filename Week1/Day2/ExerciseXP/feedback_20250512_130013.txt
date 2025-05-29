@@ -1,0 +1,15 @@
+URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week1/Day2/ExerciseXP/ExerciseXP.py
+suggestions for improvement:
+- **Exercise 1:** Use sets correctly.  The code uses lists instead of sets, losing the benefit of set operations (automatic duplicate removal).
+- **Exercise 1:** The concatenation of sets should use the `union()` method instead of list concatenation.
+- **Exercise 2:**  The exercise is about immutability.  The code cleverly works around this, but the point is missed. The code should explain *why* adding to a tuple directly is impossible.
+- **Exercise 4:** While the code generates the sequence, it doesn't directly address the question about the difference between floats and integers.  Add a comment explaining the core difference.
+- **Exercise 5:** The second part of Exercise 5 is not correctly implemented. It should print numbers with even *indices*, not even numbers themselves.
+- **Exercise 8:** The loop termination condition is unclear ('Order'). Use a more descriptive sentinel value or a `break` statement based on user input.
+- **Exercise 10:** The code successfully removes 'Pastrami', but the printing of the finished sandwiches could be improved by iterating through `finished_sandwiches` directly (rather than `sandwich_orders`).
+Brief justification:
+- correctness: The code attempts all exercises but fails to correctly implement several aspects, primarily those related to set operations, tuple immutability, and specific loop requirements.  Most loops and list manipulations are fine but there are some incorrect implementations such as the concatenation in exercise 1 and looping over even indices in exercise 5.
+- readability: The code is generally readable, with clear variable names and comments in most places. However, the logic in a few exercises could be made clearer. Consistent use of variable naming would also improve readability.
+- performance: The performance of most code segments is efficient, with linear time complexity.  There's no obvious performance bottleneck.  Some minor inefficiencies could be fixed (for instance, using the correct data structure for each task).
+- security: There are no security vulnerabilities present in this code; it's purely focused on data manipulation.
+
