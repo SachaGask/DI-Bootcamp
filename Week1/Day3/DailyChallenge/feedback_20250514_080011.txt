@@ -1,0 +1,12 @@
+URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week1/Day3/DailyChallenge/DailyChallenge.py
+suggestions for improvement:
+- Challenge 1: The code for Challenge 1 is correct and efficiently uses `enumerate` for index tracking. However,  it lacks error handling for non-alphabetic input.  Add input validation to handle cases where the user enters numbers or special characters.
+- Challenge 2: The solution to Challenge 2 is mostly correct. The code effectively cleans the price strings, converts them to integers, and compares them to the wallet amount.  It correctly handles the sorting and 'Nothing' output. However, the logic has a flaw: it doesn't account for accumulating the cost of items. If the sum of chosen items exceeds the wallet amount, it needs to be adjusted.
+- Code Style: Use more descriptive variable names (e.g., `item_price` instead of `price`).  Add comments to clarify complex logic within loops.
+- Error Handling: Add more robust error handling for the input in both challenges (e.g., handle potential `ValueError` exceptions during type conversion).
+Brief justification:
+- correctness: Challenge 1's code correctly implements the dictionary creation with indices, fulfilling the chapter's requirements on dictionaries, loops, and conditional statements. Challenge 2's code largely meets the requirements but has a flaw in accumulating cost, not fully satisfying the 'affordability' aspect.  The output format aligns with the examples.  The score reflects the near-correctness but with minor shortcomings.
+- readability: The code is generally readable, using clear variable names (though some could be improved) and straightforward logic.  However, the lack of comments in certain sections makes understanding the flow slightly less intuitive.  The `enumerate` function used in challenge 1 is efficient and readable.
+- performance: The code's performance is good for the given tasks. The algorithms are efficient; using `enumerate` and `sorted` are optimal for their respective tasks.  The string manipulation in Challenge 2 is concise. The time complexity is linear for both challenges.
+- security: The code doesn't have any obvious security vulnerabilities. No external data is accessed; therefore, there are no inherent security risks.
+

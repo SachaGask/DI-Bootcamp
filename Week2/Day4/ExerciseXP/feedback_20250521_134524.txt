@@ -1,0 +1,18 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week2/Day4/ExerciseXP/ExerciseXP.py
+suggestions for improvement:
+- The `get_words_from_file` function is missing and needs to be implemented to read the word list from the provided file.  The commented out code suggests the intention was there, but it's not functional.
+- Error handling in `main` should be more robust. Instead of raising a `TypeError`, it should print a user-friendly error message and allow the user to retry input, or gracefully exit.
+- The code lacks input validation for the file path in `get_words_from_file` (if implemented).  It should handle cases where the file doesn't exist or is inaccessible.
+- Add comments to the JSON exercise explaining each step of the process and choice of data types.
+- The `get_random_sentence` function could be improved by directly returning the capitalized string instead of using a temporary variable `phrase`. This would make the code more concise.
+Correctness: 85%
+-----
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week2/Day4/ExerciseXP/modified_data.json
+suggestions for improvement:
+- The provided code snippet only addresses Exercise 2.  Exercise 1 (random sentence generator) is missing entirely.
+- Error handling is missing. The code should include `try-except` blocks to handle potential `FileNotFoundError` (in Exercise 1) and  `KeyError` (in Exercise 2).
+- Input validation in Exercise 1 should be more robust.  It should check for non-integer input more thoroughly and potentially handle other unexpected input types.
+- The solution for Exercise 2 uses a hardcoded date. The instructions suggest a user input or a more dynamic approach for setting the birth date.
+- The code lacks a main function to tie together the different parts and enable the user to interact with the program.
+Correctness: 80%
+-----
