@@ -84,22 +84,22 @@
 
 //Ex8
 
-function makeJuice(size){
-    function addIngredients(ingredient1, ingredient2, ingredient3){
-    const message = `The client wants a ${size} juice, containing ${ingredient1}, ${ingredient2}, and ${ingredient3}.`
-    const orderDiv = document.getElementById("order");
-    orderDiv.textContent = message;
+// function makeJuice(size){
+//     function addIngredients(ingredient1, ingredient2, ingredient3){
+//     const message = `The client wants a ${size} juice, containing ${ingredient1}, ${ingredient2}, and ${ingredient3}.`
+//     const orderDiv = document.getElementById("order");
+//     orderDiv.textContent = message;
 
-    let ingredients = [];
-    ingredients.push(ingredient1, ingredient2, ingredient3);
-    console.log(ingredients)
-    }
+//     let ingredients = [];
+//     ingredients.push(ingredient1, ingredient2, ingredient3);
+//     console.log(ingredients)
+//     }
 
-    addIngredients("banana","orange","kiwi")
-    addIngredients("strawberry", "orange", "mint");
+//     addIngredients("banana","orange","kiwi")
+//     addIngredients("strawberry", "orange", "mint");
 
-}
+// }
 
-makeJuice("small")
+// makeJuice("small")
 
 
