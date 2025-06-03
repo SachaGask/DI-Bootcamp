@@ -1,0 +1,12 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week3/Day1/ExerciseXP/ExerciseXP.js
+suggestions for improvement:
+- Exercise 1: Part I -  Improve error handling for ex1_6 (indexOf on a string without specifying the search term).  The solution should explicitly show the result of indexOf('Foo'). Also, the code for removing 'Greg' uses splice which modifies the original array; consider providing an alternative that creates a new array without modifying the original for clarity.  Add comments explaining each step.
+- Exercise 1: Part II - Implement the missing loops to iterate through the 'people' array and console.log each person. The second part of this exercise requires a loop with a break statement to stop after logging 'Devon'.
+- Exercise 2:  Implement the loop to iterate through the 'colors' array and console.log the string in the requested format. Implement the bonus section to handle the correct suffix for each number (1st, 2nd, 3rd, etc.).
+- Exercise 3: Implement the prompt for a number and the while loop to continue prompting until the number is greater than or equal to 10.  Check the data type of the input from prompt using `typeof` and handle potential errors (e.g., non-numeric input).
+- Exercise 4: The provided code only addresses a few parts of the exercise. Implement the missing steps to check the sum of Sarah's and David's rent and increase Dan's rent accordingly.
+- Exercise 5: Implement the `for...in` loops to iterate over the keys and values of the 'family' object and console.log them. Create the 'family' object first.
+- Exercise 6: Implement a `for...in` loop (or standard `for` loop using Object.keys) to iterate over the 'details' object and construct the final string, then console.log it.
+- Exercise 7: Implement the logic to find the first letters of the names, sort them alphabetically, and create the secret society name.
+Correctness: 60%
+-----

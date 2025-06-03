@@ -1,0 +1,19 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week3/Day3/ExerciseXP/index.html
+suggestions for improvement:
+- In Exercise 1, add error handling for cases where elements might not be found (e.g., check if `h1`, `h2`, `h3` etc., exist before manipulating them).
+- In Exercise 1, the bonus fade-out effect could be improved by using CSS transitions instead of animations for smoother results.  The current solution uses an animation that might not be desired by the user.
+- In Exercise 2, improve the form's user experience by providing feedback to the user if either field is left blank.  Consider using placeholders in the input fields.
+- In Exercise 3, the `getBoldItems` function could be called within an event listener, rather than immediately after declaration, only when the elements are needed. This improves performance slightly by not doing unnecessary work on page load.
+- In Exercise 4, add input validation to the radius field to ensure the user enters a valid number.  Currently, it allows non-numeric input which will cause an error or unexpected results.
+Correctness: 95%
+-----
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week3/Day3/ExerciseXP/index2.html
+suggestions for improvement:
+- The provided code does not address any of the exercises in the Chapter Content/Questions. It implements two different exercises: a timer and an animation of a box moving across the screen. 
+- The code needs to be completely rewritten to address the DOM manipulation, event handling, form processing, and other tasks outlined in the document.
+- Exercise 1 requires DOM manipulation (getting h1, removing paragraphs, adding event listeners), which is completely absent.
+- Exercise 2 requires form handling, which is also missing.
+- Exercise 3 involves manipulating bold text within a paragraph, which is not present.
+- Exercise 4 needs a sphere volume calculator, not implemented here.
+Correctness: 0%
+-----
