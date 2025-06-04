@@ -1,0 +1,13 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week3/Day5/DailyChallenge/index.html
+suggestions for improvement:
+- The `cloneGroceries` function should explicitly create a deep copy of the `groceries` object to demonstrate the difference between pass-by-reference and pass-by-value more clearly.  Currently, it uses assignment, which creates a shallow copy, leading to unintended modifications.  A deep copy would ensure that changes to `shopping` don't affect `groceries`.
+- Add comments explaining why the modifications to `client` affect `user` and why modifications to `groceries` affect `shopping` (shallow copy behavior). This would enhance the learning experience.
+- The instructions mention using the `forEach` method to display fruits, but the provided code doesn't show this. The `displayGroceries` function should be implemented to use `forEach`.
+Correctness: 80%
+-----
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week3/Day5/DailyChallenge/script.js
+suggestions for improvement:
+- The `cloneGroceries` function should explicitly demonstrate the difference between pass-by-value and pass-by-reference by creating a *deep copy* of the `groceries` object for the `shopping` variable.  Currently, it uses a shallow copy, making the changes to `shopping` affect `groceries`.  This obscures the learning objective.
+- Add comments to explain the pass-by-value and pass-by-reference behaviors observed in the console output.  This will make it clearer for the learner.
+Correctness: 90%
+-----

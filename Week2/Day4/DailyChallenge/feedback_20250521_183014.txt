@@ -1,0 +1,13 @@
+URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week2/Day4/DailyChallenge/DailyChallenge.py
+suggestions for improvement:
+- The `word_frequency` method could return 0 instead of `None` when a word is not found. This is more consistent and intuitive.
+- The `remove_stop_words` method should handle lowercase and uppercase words consistently.  Currently, it only checks lowercase versions against the lowercase stopwords set.
+- The `remove_stop_words` method could be improved by making the stop words set a class attribute to avoid recreating it every time the method is called. This enhances performance.
+- Add error handling (e.g., `try-except` block) to the `from_file` method to handle potential `FileNotFoundError` exceptions, making it more robust.
+- Consider using a more comprehensive list of stop words, potentially drawing from NLTK or SpaCy libraries for broader accuracy.
+Brief justification:
+- correctness: The code implements all required classes and methods.  The core functionality of text analysis (word frequency, most common word, unique words) is correct. The file reading functionality is also correct.  The text modification methods (punctuation, stop words, special characters removal) mostly work as expected, although some improvements can be made in consistency and robustness as mentioned above. The score is slightly reduced due to the minor flaws in handling word frequencies (returning None instead of 0) and the inconsistent treatment of uppercase/lowercase stopwords.
+- readability: The code is generally well-structured and easy to understand. The use of `Counter` for word frequency is efficient and readable. However, the stop words list within the `remove_stop_words` method could be better organized (as a class constant, for instance) for increased clarity.  Adding docstrings to methods would further improve readability.
+- performance: The performance is acceptable for small texts, but the repeated creation of stop_words set and splitting of text in `remove_stop_words` impacts the performance of larger texts. Optimization suggestions include making the stop words set a class attribute and potentially using more efficient data structures or algorithms for very large text files. The use of regular expressions for removing special characters is generally efficient.
+- security: The code doesn't have any obvious security vulnerabilities. The file handling using `with open(...)` ensures that the file is automatically closed, preventing resource leaks. The use of encoding="utf-8" helps prevent issues when handling files with different character sets.
+
