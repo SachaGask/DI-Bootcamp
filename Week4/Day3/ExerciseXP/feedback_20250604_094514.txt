@@ -1,0 +1,13 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week4/Day3/ExerciseXP/script.js
+suggestions for improvement:
+- In Exercise 1, the output of the console.log is slightly different than what's shown in the comments.  The longitude should be within parentheses.
+- Exercise 2 is correctly implemented but could include more robust error handling (e.g., check if `first` and `last` are defined).
+- Exercise 3 is well done.  Could add comments explaining the use of `Object.entries` and `map`.
+- Exercise 5 should explicitly state which constructor is correct (Constructor 2) instead of just showing it.
+- Exercise 6, part 1, should show the results (false, false).
+- Exercise 6, part 2, should include the output in the comments (4, 4, 5).
+- Exercise 6, part 3, is missing a constructor for `Animal`.  The array was not used appropriately.
+- Exercise 6, part 4, the `Mammal` class should have the `sound()` method, and it was not called in `farmerCow`. The `farmerCow` method should also be removed, as it is the `sound` method that's being called.
+- Exercise 6, part 5, the example output string is slightly different (missing comma). `farmerCow` object and call are misplaced. The method should return the string, not print it directly to the console.
+Correctness: 90%
+-----
