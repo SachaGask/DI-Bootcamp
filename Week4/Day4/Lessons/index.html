@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer async></script>
+</head>
+<body>
+    <h2>HTTP Methods, Forms, JSON & Exceptions</h2>
+    <h2>Form with GET</h2>
+    <form method="GET">
+        <input name="username" placeholder="Username..."/>
+        <input name="password" type="password" placeholder="Password..."/>
+        <input type="submit"/>
+    </form>
+
+    <h2>Form with POST</h2>
+        <form method="POST">
+        <input name="username" placeholder="Username..."/>
+        <input name="password" type="password" placeholder="Password..."/>
+        <input type="submit"/>
+    </form>
+
+    <h2>Get One User JSON with hidden input</h2>
+    <form methode="GET" action="https://jsonplaceholder.typicode.com/users">
+        <input name="id" type="hidden", value="7"/>
+        <input type="submit"/>
+    </form>
+
+    <h2>Search on Google</h2>
+    <form methode="GET" action="https://google.com/search" target="_blank">
+        <input name="q"/>
+        <input type="submit" value="Search Google"/>
+    </form>
+
+    <h2>Add a Post</h2>
+    <form method="POST" action="https://jsonplaceholder.typicode.com/posts">
+        <input name="title" placeholder="Title..."/>
+        <input name="body" placeholder="Body..."/>
+        <input name="userID" placeholder="User ID..."/>
+        <input type="submit" value="Add Post"/>
+    </form>
+
+    <h2>Exercise</h2>
+    <form method="POST" action="https://users-18kl.onrender.com/user">
+        <input name="name" placeholder="Name..."/>
+        <input name="email" placeholder="Email..."/>
+        <input name="username" placeholder="Username..."/>
+        <input type="submit" value="Add Post"/>
+    </form>
+
+</body>
+</html>
