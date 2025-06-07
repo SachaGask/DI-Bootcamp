@@ -1,0 +1,13 @@
+URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week1/Day4/DailyChallenge/DailyChallenge.py
+suggestions for improvement:
+- The code skips Step 3 (Filtering Alpha Characters) explicitly.  While the regular expression in Step 4 implicitly filters by only keeping alpha characters around spaces, making Step 3 unnecessary, it's better to be explicit for clarity. Add a step that explicitly filters only alpha characters before the regex step.
+- The code directly concatenates characters without considering the need for space insertion based on non-alphabetic characters. The regex handles space insertion but does not address all cases (e.g., leading/trailing non-alpha characters).
+- Add more robust error handling. For instance, what if the input string is empty or malformed?
+- Use more descriptive variable names. For example, instead of `column_text`, use `unprocessed_column_text`.
+- The code could benefit from comments explaining the regular expression used. Regular expressions can be difficult to understand, and a comment explaining its purpose and functionality would enhance readability.
+Brief justification:
+- correctness: The code correctly transforms the matrix string into a 2D list and processes it column-wise. The use of regular expressions effectively replaces symbol groups between alpha characters with spaces, resulting in a partially correct decoded message. However, it lacks an explicit alpha character filtering step mentioned in the instructions and doesn't handle all space insertion cases. The omission of Step 3, while functionally not crucial due to the regex, deviates from the instructions and reduces the score.  The final message is mostly correct but could be improved with more rigorous handling of non-alpha characters.
+- readability: The code is relatively easy to follow, especially with the clear step comments. However, the regular expression could be more self-explanatory, and more descriptive variable names would significantly improve understanding.  The lack of explicit filtering reduces the readability because a reader might not immediately understand why Step 3 is omitted.
+- performance: The code's performance is efficient. Using a list comprehension for 2D list creation and regular expressions for character filtering and space insertion are optimized approaches. The time complexity is linear with respect to the input string size.
+- security: There are no apparent security vulnerabilities in the code. The code only deals with string manipulation and doesn't involve external resources or user input that could introduce security risks.
+

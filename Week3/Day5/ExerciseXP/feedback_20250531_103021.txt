@@ -1,0 +1,24 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week3/Day5/ExerciseXP/Exercise1.html
+suggestions for improvement:
+- Exercise 1: The code is missing the predicted values as comments, and the explanations of the predictions.  Also, it doesn't address the 'What will happen if the variable is declared with const instead of let?' questions for each section.
+- Exercise 2: The code is missing.  The solution should include the arrow function conversion of winBattle, the ternary operator assignment to experiencePoints, and the console.log statement.
+- Exercise 3: The code is missing. The solution should include an arrow function named isString that correctly identifies strings.
+- Exercise 4: The code is missing. The solution should be a single-line arrow function that sums two numbers.
+- Exercise 5: The code is missing.  The solution should include three function implementations (declaration, expression, arrow) and a comment explaining the difference.
+- Exercise 6: The code is missing. The solution should be a self-invoking function that dynamically updates the DOM.
+- Exercise 7: The provided HTML is a good start. However, the Javascript code for the self-invoking function to add the user's div to the navbar is missing.  The code should handle adding the div with the user's name and image to the navbar. The image source needs to be specified or handled dynamically. 
+- Exercise 8: The code is missing. The solution should correctly implement the nested functions, inner function invocation, array manipulation, and DOM updates described in both parts.
+Correctness: 70%
+-----
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week3/Day5/ExerciseXP/Exercise1.js
+suggestions for improvement:
+- Exercise 1: The comments for Exercise 1 are incomplete and lack explanations.  The code itself doesn't execute the prediction checks as instructed.
+- Exercise 2: The winBattle function doesn't use a ternary operator, it uses an if/else statement. The function also doesn't return the correct value. The experiencePoints should be declared outside the function.
+- Exercise 3: The `isString` function is correctly implemented, using a function declaration instead of an arrow function as requested.
+- Exercise 4: The arrow function is correctly implemented.
+- Exercise 5:  The exercises are completed correctly. The comment describing the difference between function declaration and expression is missing.
+- Exercise 6: The self-invoking function is correctly implemented.
+- Exercise 7: The self-invoking function correctly adds a div to the navbar. The use of a placeholder image is appropriate for a practice exercise.
+- Exercise 8: Part I is correctly implemented. Part II has issues; the addIngredients function is modifying the ingredients array incorrectly and the displayJuice function is not implemented.  The ingredients array should be defined outside the inner function to persist across calls.
+Correctness: 60%
+-----
