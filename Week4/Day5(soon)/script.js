@@ -27,3 +27,4 @@ const marioGame = {
 
 const marioJSON = JSON.stringify(marioGame, null, 2); // pretty print
 console.log(marioJSON);
+
