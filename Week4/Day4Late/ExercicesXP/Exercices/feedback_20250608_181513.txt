@@ -1,0 +1,18 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week4/Day4Late/ExercicesXP/Exercices/DailyChallenge.js
+suggestions for improvement:
+- The provided code does not address any of the exercises (1, 2, or 3) in the Chapter Content/Questions.  It implements two unrelated functions: `makeAllCaps` and `sortWords`.
+- Exercise 1 requires a `compareToTen` function that returns a promise resolving or rejecting based on a numerical comparison. This is completely absent.
+- Exercise 2 asks to create a promise resolving after 4 seconds. This is not implemented.
+- Exercise 3 requires using `Promise.resolve` and `Promise.reject`. This is not implemented.
+- The functions `makeAllCaps` and `sortWords` are functional but unrelated to the chapter's exercises. They should be removed and replaced with solutions for the specified exercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week4/Day4Late/ExercicesXP/Exercices/script.js
+suggestions for improvement:
+- In Exercise 1, the function's return value could be improved for clarity.  Instead of concatenating strings, it might be better to return only the number itself and handle the message in the `.then` block. This separates the core logic of comparison from the output formatting.
+- In Exercise 2, the instruction to make the promise shorter using `Promise.resolve()` wasn't implemented.  A solution using `Promise.resolve()` would improve conciseness.
+- Exercise 2's success message is in French. While not technically incorrect, using English for consistency would improve international readability.
+- Exercise 2 is missing the error handling instruction (console.log 'Ooops something went wrong').
+- In Exercise 3, using descriptive variable names like `resolvedPromise` and `rejectedPromise` is good practice but the comments could be removed as they're very clear and the code is self-explanatory.
+Correctness: 95%
+-----
