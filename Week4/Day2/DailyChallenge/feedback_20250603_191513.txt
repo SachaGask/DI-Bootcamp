@@ -1,0 +1,6 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week4/Day2/DailyChallenge/script.js
+suggestions for improvement:
+- The code could be slightly improved by using more descriptive variable names (e.g., `playerUsernames` instead of `usernames`).
+- Consider adding comments to explain the purpose of each section of code for better readability, especially for more complex scenarios.
+Correctness: 100%
+-----

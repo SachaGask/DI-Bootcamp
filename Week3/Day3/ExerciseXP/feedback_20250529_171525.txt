@@ -1,0 +1,19 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week3/Day3/ExerciseXP/index.html
+suggestions for improvement:
+- The code does not address any of the requirements of Exercise 1 (Timer) or Exercise 2 (Move the box).  It implements four completely different exercises.
+- Exercise 1 should use `setTimeout` and `setInterval` to manipulate the DOM by adding paragraphs to a div.  This is missing.
+- Exercise 2 should use `setInterval` to animate a div across the screen. This is missing.
+- The code for Exercises 3 and 4 are unrelated and well-implemented, but do not fulfill the requirements of the assignment.
+- Add comments to explain the purpose of each section of code more clearly. While the code is mostly readable,  comments would enhance understanding, especially for someone unfamiliar with the specific tasks.
+- Consider using more descriptive variable names. For example, instead of `r`, use `radius` in Exercise 4.
+Correctness: 20%
+-----
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week3/Day3/ExerciseXP/index2.html
+suggestions for improvement:
+- In Exercise 1, Part III, the `clearInterval` call within the `setInterval` callback is sufficient.  The `return` statement is redundant since `clearInterval` stops the interval.
+- Exercise 2's animation is very jerky due to the 1ms interval.  Increase the interval to at least 10ms for smoother animation. Consider using `requestAnimationFrame` for even better performance and browser synchronization.
+- Add comments to explain the purpose of different code sections and variables.  Especially useful in `myMove` function in Exercise 2. 
+- Use more descriptive variable names (e.g., instead of `elem`, use `animatedBox`).
+- Consider adding error handling (e.g., checking if elements exist before manipulating them) to improve robustness.
+Correctness: 95%
+-----

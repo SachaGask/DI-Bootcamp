@@ -1,0 +1,17 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week4/Day5(soon)/index.html
+suggestions for improvement:
+- Exercise 1 and 2:  The forms correctly use GET and POST methods respectively. However, they lack error handling and input validation.  The instructions mention using the 'same HTML file for the action URL', implying the data should be processed on the same page; this is not implemented.  A server-side component is needed to process the data.
+- Exercise 1: The GET request's data will appear in the URL, which is explicitly stated in the instructions. However, it lacks explanation for longer messages and URL length limitations.
+- Exercise 2: The POST request data won't be visible in the URL, requiring the use of browser developer tools (Network tab) to view the request body, as indicated in the instructions.
+- Exercise 3: The code is missing.  The instructions correctly describe converting a JS object to JSON, pretty printing it, and debugging using the web inspector's breakpoint.  The missing code prevents assessment of this part.
+- Add input validation to prevent things like script injection or excessively long input values.
+- For Exercises 1 and 2, add a basic JavaScript function to display a confirmation message after successful submission or an error message otherwise. This will provide feedback to the user.
+- Consider adding styling to enhance the forms' visual appeal.
+Correctness: 80%
+-----
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week4/Day5(soon)/script.js
+suggestions for improvement:
+- The code for Exercises 1 and 2 is missing.  The provided code only addresses Exercise 3.
+- Add comments explaining the purpose of `JSON.stringify(marioGame, null, 2)` for better readability.
+Correctness: 100%
+-----

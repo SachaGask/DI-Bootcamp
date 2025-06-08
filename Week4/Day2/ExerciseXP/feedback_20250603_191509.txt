@@ -1,0 +1,7 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week4/Day2/ExerciseXP/script.js
+suggestions for improvement:
+- In Exercise 1, add a check for the existence of 'Violet' as instructed. The current code only displays the array elements.
+- In Exercise 2, the ternary operator can be simplified or replaced by a lookup table for better readability and maintainability.
+- In Exercise 6, add the bonus `forEach` loop to congratulate the passed students as requested.  The current code only filters the array.
+Correctness: 90%
+-----

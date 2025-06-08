@@ -1,0 +1,7 @@
+URL: URL: https://github.com/SachaGask/DI-Bootcamp/blob/main/Week4/Day5(soon)/DailyChallenge/index.html
+suggestions for improvement:
+- The code could benefit from more descriptive variable names (e.g., `firstName` instead of `name`).
+- Consider adding input validation to handle cases where the user doesn't enter a name or enters invalid characters.
+- For larger applications, using a more robust method to handle JSON, such as `fetch` for sending data to a server, might be preferable.
+Correctness: 100%
+-----
