@@ -36,3 +36,4 @@ const rejectedPromise = Promise.reject("Bouh !");
 rejectedPromise.catch(error => {
   console.log("Rejeté avec :", error); // Rejeté avec : Bouh !
 });
+
