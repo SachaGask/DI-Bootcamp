@@ -29,7 +29,7 @@ fetch("https://exemple.com/api", { //URL de l'API
 });
 
 
-// Connecter une API à un formulaire HTML //
+// Récuperer les données d'un formulaire HTML //
 
 document.getElementById("userForm").addEventListener("submit", handleSubmit); // id "userForm" du formulaire et bouton submit
 
@@ -46,7 +46,7 @@ function handleSubmit(event) {
 
 // Async & Await //
 
-// On peut ecrire avec then:
+// On peut accéder avec then:
 
 fetch("https://jsonplaceholder.typicode.com/users")
   .then(res => res.json()) // Transforme en objet js
