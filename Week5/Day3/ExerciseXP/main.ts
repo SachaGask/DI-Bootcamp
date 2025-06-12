@@ -61,43 +61,34 @@
 
 //Ex4
 
-// class Calculator {
-//     private a: number;
-//     private b: number;
+class Calculator {
+    static add(a: number, b: number): number {
+        return a + b;
+    }
 
-//     constructor(
-//         a: number,
-//         b: number
-//     ) {
-//         this.a = a;
-//         this.b = b;
-//     }
+    static subtract(a: number, b: number): number {
+        return a - b;
+    }
+}
 
-//     add(): number {
-//         return this.a + this.b;
-//     }
-
-//     subtract(): number {
-//         return this.a - this.b;
-//     }
-// }
-
-// const calc = new Calculator(5,3);
-// console.log(calc.add());
-// console.log(calc.subtract());
+console.log(Calculator.add(5, 3));
+console.log(Calculator.subtract(5, 3));
 
 //Ex5
 
-class User {
+interface IUser {
     readonly id: number;
-    public name: string;
-    public email: string;
+    name: string;
+    email: string;
+    membershipLevel?: number;
+}
 
-    constructor(
-        id: number,
-        name: string,
-        email: string
-    ) {
+class User implements IUser {
+    readonly id: number;
+    name: string;
+    email: string;
+
+    constructor(id: number, name: string, email: string) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -105,22 +96,21 @@ class User {
 }
 
 class PremiumUser extends User {
-    private membershipLevel: number
+    public membershipLevel: number;
 
-    constructor(
-        id: number,
-        name: string,
-        email: string,
-        membershipLevel: number
-    ) {
+    constructor(id: number, name: string, email: string, membershipLevel: number) {
         super(id, name, email);
         this.membershipLevel = membershipLevel;
     }
-
-        printUserDetails(): string {
-        return `ID: ${this.id}, Nom: ${this.name}, Email: ${this.email}, Membership: ${this.membershipLevel}`
-    }
 }
 
-const John = new PremiumUser(1,"John","john@gmail.com",3)
-console.log(John.printUserDetails())
+function printUserDetails(user: IUser): string {
+    let details = `ID: ${user.id}, Nom: ${user.name}, Email: ${user.email}`;
+    if (user.membershipLevel !== undefined) {
+        details += `, Membership: ${user.membershipLevel}`;
+    }
+    return details;
+}
+
+const John = new PremiumUser(1, "John", "john@gmail.com", 3);
+console.log(printUserDetails(John));
