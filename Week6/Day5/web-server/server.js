@@ -31,6 +31,8 @@ app.listen(PORT, () => {
 // Middleware - Function //
 app.use('/', express.static(__dirname + '/public'));
 
+
+
 app.get('/search', (req,res) => {
     const {name} = req.query;
     const filteredUsers = users.filter(item => {
