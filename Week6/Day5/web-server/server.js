@@ -1,21 +1,3 @@
-// API //
-
-// RESTful API
-// Create - POST
-// Read - GET
-// Update - PUT/PATCH
-// Delete - DELETE
-
-// /users - GET - get all users/one user
-// /users - POST - create a new user
-// /users - PUT - update a user
-// /users- - DELETE - delete a user
-
-// app.get
-// app.post
-// app.put
-// app.delete
-
 const express = require('express');
 const { users } = require('./models/data.js');
 
