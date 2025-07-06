@@ -1,77 +1,101 @@
-// server.js
+// 🌟 Exercise 1: blog-api/server.js
 const express = require('express');
 const app = express();
 const PORT = 3000;
 
 app.use(express.json());
 
-// Simule une base de données en mémoire
 let posts = [
-  { id: 1, title: "Premier post", content: "Contenu du premier post" },
-  { id: 2, title: "Deuxième post", content: "Contenu du deuxième post" },
+  { id: 1, title: 'First Post', content: 'Hello World!' },
+  { id: 2, title: 'Second Post', content: 'Another blog entry' }
 ];
 
-// ROUTES CRUD
+app.get('/posts', (req, res) => res.json(posts));
 
-// GET /posts - liste tous les posts
-app.get('/posts', (req, res) => {
-  res.json(posts);
-});
-
-// GET /posts/:id - retourne un post par id
 app.get('/posts/:id', (req, res) => {
-  const post = posts.find(p => p.id === parseInt(req.params.id));
-  if (!post) return res.status(404).json({ message: "Post non trouvé" });
-  res.json(post);
+  const post = posts.find(p => p.id == req.params.id);
+  post ? res.json(post) : res.status(404).send('Post not found');
 });
 
-// POST /posts - crée un nouveau post
 app.post('/posts', (req, res) => {
-  const { title, content } = req.body;
-  if (!title || !content) return res.status(400).json({ message: "Title and content are required" });
-
-  const newPost = {
-    id: posts.length + 1,
-    title,
-    content
-  };
+  const newPost = { id: posts.length + 1, ...req.body };
   posts.push(newPost);
   res.status(201).json(newPost);
 });
 
-// PUT /posts/:id - met à jour un post existant
 app.put('/posts/:id', (req, res) => {
-  const post = posts.find(p => p.id === parseInt(req.params.id));
-  if (!post) return res.status(404).json({ message: "Post non trouvé" });
-
-  const { title, content } = req.body;
-  post.title = title || post.title;
-  post.content = content || post.content;
-
-  res.json(post);
+  const post = posts.find(p => p.id == req.params.id);
+  if (post) {
+    Object.assign(post, req.body);
+    res.json(post);
+  } else res.status(404).send('Post not found');
 });
 
-// DELETE /posts/:id - supprime un post
 app.delete('/posts/:id', (req, res) => {
-  const index = posts.findIndex(p => p.id === parseInt(req.params.id));
-  if (index === -1) return res.status(404).json({ message: "Post non trouvé" });
-
-  posts.splice(index, 1);
-  res.json({ message: "Post supprimé avec succès" });
+  const index = posts.findIndex(p => p.id == req.params.id);
+  if (index >= 0) {
+    posts.splice(index, 1);
+    res.sendStatus(204);
+  } else res.status(404).send('Post not found');
 });
 
-// ❌ Middleware pour les routes non trouvées
-app.use((req, res, next) => {
-  res.status(404).json({ message: "Route introuvable" });
+app.use((req, res) => res.status(404).send('Route not found'));
+app.listen(PORT, () => console.log(`Blog API running on port ${PORT}`));
+
+
+// 🌟 Exercise 2: book-api/app.js
+const express = require('express');
+const app = express();
+const PORT = 5000;
+
+app.use(express.json());
+
+let books = [
+  { id: 1, title: 'Book A', author: 'Author A', publishedYear: 2000 },
+  { id: 2, title: 'Book B', author: 'Author B', publishedYear: 2005 }
+];
+
+app.get('/api/books', (req, res) => res.json(books));
+
+app.get('/api/books/:bookId', (req, res) => {
+  const book = books.find(b => b.id == req.params.bookId);
+  book ? res.status(200).json(book) : res.status(404).send('Book not found');
 });
 
-// 🚨 Middleware de gestion d’erreurs internes
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ message: "Erreur serveur interne" });
+app.post('/api/books', (req, res) => {
+  const newBook = { id: books.length + 1, ...req.body };
+  books.push(newBook);
+  res.status(201).json(newBook);
 });
 
-// 🚀 Démarrer le serveur
-app.listen(PORT, () => {
-  console.log(`Serveur lancé sur http://localhost:${PORT}`);
+app.listen(PORT, () => console.log(`Book API running on port ${PORT}`));
+
+
+// 🌟 Exercise 3: crud-api/app.js
+const express = require('express');
+const { fetchPosts } = require('./data/dataService');
+const app = express();
+const PORT = 5000;
+
+app.get('/api/posts', async (req, res) => {
+  try {
+    const posts = await fetchPosts();
+    console.log('Posts retrieved and sent');
+    res.json(posts);
+  } catch (err) {
+    res.status(500).send('Error fetching posts');
+  }
 });
+
+app.listen(PORT, () => console.log(`CRUD API running on port ${PORT}`));
+
+
+// 🌟 Exercise 3: crud-api/data/dataService.js
+const axios = require('axios');
+
+async function fetchPosts() {
+  const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+  return response.data;
+}
+
+module.exports = { fetchPosts };
