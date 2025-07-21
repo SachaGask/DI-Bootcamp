@@ -1,6 +1,5 @@
 import './App.css';
-import UserFavoriteAnimals from './UserFavoriteAnimals.jsx';
-import Exercise from './Exercise3.jsx';
+import UserFavoriteAnimals from './UserFavoriteAnimals';
 
 const user = {
   firstName: 'Bob',
