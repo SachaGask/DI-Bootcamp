@@ -1,37 +1,26 @@
-import { useContext, useEffect } from "react";
-import { ThemeContext, ThemeProvider } from "./ThemeContext";
+import { ThemeProvider } from "./components/ThemeContext";
+import ThemeSwitcher from "./components/ThemeSwitcher";
+import CharCounter from "./components/CharCounter";
+import TodoList from "./components/TodoList";
 
-function ThemeSwitcher() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-  return (
-    <button onClick={toggleTheme}>
-      Passer en mode {theme === "light" ? "sombre" : "clair"}
-    </button>
-  );
-}
-
-function App() {
-  const { theme } = useContext(ThemeContext);
-
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '2rem', minHeight: '60vh' }}>
-      <h1>Bienvenue</h1>
-      <ThemeSwitcher />
-      <hr style={{ width: '100%', margin: '2rem 0' }} />
-      <CharCounter />
-    </div>
-  );
-}
-// import TaskManager from "./TaskManager";
-import CharCounter from "./CharCounter";
-
-export default function Root() {
+export default function App() {
   return (
     <ThemeProvider>
-      <App />
+      <div style={{ maxWidth: 600, margin: '2rem auto', padding: 24 }}>
+        <h1>Exercices React</h1>
+        <section style={{ marginBottom: '2rem' }}>
+          <h2>1. Theme Switcher</h2>
+          <ThemeSwitcher />
+        </section>
+        <section style={{ marginBottom: '2rem' }}>
+          <h2>2. Character Counter</h2>
+          <CharCounter />
+        </section>
+        <section>
+          <h2>3. Todo List</h2>
+          <TodoList />
+        </section>
+      </div>
     </ThemeProvider>
   );
 }
