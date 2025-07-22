@@ -25,6 +25,7 @@ function App() {
     </div>
   );
 }
+// import TaskManager from "./TaskManager";
 import CharCounter from "./CharCounter";
 
 export default function Root() {
