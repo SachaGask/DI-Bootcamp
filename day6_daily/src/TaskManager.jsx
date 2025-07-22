@@ -1,4 +1,5 @@
-import { createContext, useContext, useReducer, useRef, useState } from "react";
+import { createContext, useContext, useReducer, useRef, useState, useEffect } from "react";
+import "./TaskManager.css";
 
 const TaskContext = createContext();
 
@@ -68,8 +69,8 @@ function TaskInput() {
     }
   };
   return (
-    <div style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
-      <input ref={inputRef} type="text" placeholder="New Task" style={{ flex: 1, padding: '0.5rem' }} />
+    <div className="task-input-row">
+      <input ref={inputRef} type="text" placeholder="New Task" />
       <button onClick={handleAdd}>Add</button>
     </div>
   );
@@ -79,6 +80,12 @@ function TaskList() {
   const { state, dispatch } = useTasks();
   const [editId, setEditId] = useState(null);
   const editRef = useRef();
+  // Focus input when editing
+  useEffect(() => {
+    if (editId !== null && editRef.current) {
+      editRef.current.focus();
+    }
+  }, [editId]);
 
   let tasksToShow = state.tasks;
   if (state.filter === "completed") tasksToShow = tasksToShow.filter(t => t.completed);
@@ -101,25 +108,26 @@ function TaskList() {
   };
 
   return (
-    <ul style={{ listStyle: 'none', padding: 0 }}>
+    <ul className="task-list">
       {tasksToShow.map((task) => (
-        <li key={task.id} style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
-          <button onClick={() => handleEdit(task.id, task.text)} style={{ order: -1 }}>
+        <li key={task.id} className="task-list-item">
+          <button className="edit-btn" onClick={() => handleEdit(task.id, task.text)} aria-label={`Edit task ${task.text}`}>
             Edit
           </button>
           <input
             type="checkbox"
             checked={task.completed}
             onChange={() => dispatch({ type: "TOGGLE_TASK", id: task.id })}
+            aria-label={`Mark ${task.text} as completed`}
           />
           {editId === task.id ? (
             <>
-              <input ref={editRef} defaultValue={task.text} style={{ flex: 1, padding: '0.3rem' }} />
+              <input ref={editRef} defaultValue={task.text} className="task-text" aria-label="Edit task text" />
               <button onClick={() => handleSave(task.id)}>Save</button>
               <button onClick={() => setEditId(null)}>Cancel</button>
             </>
           ) : (
-            <span style={{ textDecoration: task.completed ? "line-through" : "none" }}>{task.text}</span>
+            <span className="task-text" style={{ textDecoration: task.completed ? "line-through" : "none" }}>{task.text}</span>
           )}
         </li>
       ))}
@@ -130,22 +138,22 @@ function TaskList() {
 function TaskFilters() {
   const { state, dispatch } = useTasks();
   return (
-    <div style={{ display: 'flex', gap: '1rem', margin: '1rem 0' }}>
+    <div className="task-filters">
       <button
         onClick={() => dispatch({ type: "FILTER_TASKS", filter: "all" })}
-        style={{ fontWeight: state.filter === "all" ? "bold" : "normal" }}
+        aria-pressed={state.filter === "all"}
       >
         All
       </button>
       <button
         onClick={() => dispatch({ type: "FILTER_TASKS", filter: "active" })}
-        style={{ fontWeight: state.filter === "active" ? "bold" : "normal" }}
+        aria-pressed={state.filter === "active"}
       >
         Actives
       </button>
       <button
         onClick={() => dispatch({ type: "FILTER_TASKS", filter: "completed" })}
-        style={{ fontWeight: state.filter === "completed" ? "bold" : "normal" }}
+        aria-pressed={state.filter === "completed"}
       >
         Completed
       </button>
@@ -156,8 +164,8 @@ function TaskFilters() {
 export default function TaskManager() {
   return (
     <TaskProvider>
-      <div style={{ maxWidth: 600, margin: '2rem auto', background: 'rgba(255,255,255,0.8)', borderRadius: 8, padding: 24, boxShadow: '0 2px 8px #0001' }}>
-        <h2>Task Manager</h2>
+      <div className="task-manager-container">
+        <h2 className="task-manager-title">Task Manager</h2>
         <TaskInput />
         <TaskFilters />
         <TaskList />

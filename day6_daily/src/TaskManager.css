@@ -1,0 +1,47 @@
+/* TaskManager styles for better separation and maintainability */
+.task-manager-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: rgba(255,255,255,0.8);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px #0001;
+}
+.task-manager-title {
+  margin-bottom: 1.5rem;
+}
+.task-input-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.task-input-row input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+}
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+.task-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.task-list-item .edit-btn {
+  order: -1;
+}
+.task-list-item .task-text {
+  flex: 1;
+  text-align: left;
+}
+.task-filters {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.task-filters button[aria-pressed="true"] {
+  font-weight: bold;
+  text-decoration: underline;
+}
