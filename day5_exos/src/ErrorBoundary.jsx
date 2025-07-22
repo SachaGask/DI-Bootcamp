@@ -6,17 +6,24 @@ export default class ErrorBoundary extends Component {
     this.state = { hasError: false };
   }
 
+
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true, error };
   }
 
   componentDidCatch(error, errorInfo) {
-    // Log error if needed
+    // Log error to the console or a service
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
-      return <h2>Something went wrong.</h2>;
+      return (
+        <div style={{ color: 'red', padding: '2rem' }}>
+          <h2>Something went wrong.</h2>
+          {this.state.error && <pre>{this.state.error.toString()}</pre>}
+        </div>
+      );
     }
     return this.props.children;
   }
