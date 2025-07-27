@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import AddTask from './components/AddTask';
 import TaskList from './components/TaskList';
+import Calendar from './components/Calendar';
 import { setTasks } from './redux/plannerSlice';
 
 
@@ -29,12 +30,7 @@ function AppContent() {
   return (
     <div style={{ maxWidth: 400, margin: '40px auto', padding: 24, border: '1px solid #ddd', borderRadius: 8 }}>
       <h2>Daily Planner</h2>
-      <input
-        type="date"
-        value={selectedDay}
-        onChange={e => setSelectedDay(e.target.value)}
-        style={{ marginBottom: 16 }}
-      />
+      <Calendar selectedDay={selectedDay} onChange={setSelectedDay} />
       <AddTask day={selectedDay} />
       <TaskList day={selectedDay} />
     </div>
