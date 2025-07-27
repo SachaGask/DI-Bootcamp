@@ -1,9 +1,9 @@
-import { createStore } from 'redux';
+import { configureStore } from 'redux';
 import plannerReducer from './reducer';
 
-const store = createStore(
-  plannerReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+const store = configureStore({
+  reducer: plannerReducer,
+  devTools: process.env.NODE_ENV !== 'production'
+});
 
 export default store;

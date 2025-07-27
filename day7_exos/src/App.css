@@ -1,19 +1,8 @@
-/* Effet de survol sur le texte des tâches */
-.task-list span:hover {
-  color: #1976d2;
-  cursor: pointer;
-}
 #root {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#root {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
 .logo {
