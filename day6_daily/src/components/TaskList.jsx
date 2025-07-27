@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { editTask, deleteTask } from '../redux/actions';
 
@@ -43,7 +42,14 @@ function TaskList({ tasks, selectedDay, onEdit, onDelete }) {
               <span>{task.text}</span>
               <button onClick={() => startEdit(task)} style={{ marginLeft: 8 }}>
 Éditer</button>
-              <button onClick={() => onDelete(task.id)} style={{ marginLeft: 8 }}>Supprimer</button>
+              <button
+                onClick={() => {
+                  if (window.confirm('Supprimer cette tâche ?')) onDelete(task.id);
+                }}
+                style={{ marginLeft: 8 }}
+              >
+                Supprimer
+              </button>
             </>
           )}
         </li>
@@ -64,7 +70,8 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   },
   onDelete: id => {
     if (!ownProps.selectedDay) return;
-    dispatch(deleteTask(ownProps.selectedDay, id));
+    // S'assurer que l'id est bien transmis en string pour correspondre au reducer
+    dispatch(deleteTask(ownProps.selectedDay, String(id)));
   }
 });
 
