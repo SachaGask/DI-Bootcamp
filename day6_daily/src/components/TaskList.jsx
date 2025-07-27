@@ -1,23 +1,31 @@
 import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { editTask, deleteTask } from '../redux/actions';
 
-function TaskList({ tasks, onEdit, onDelete }) {
+function TaskList({ tasks, selectedDay, onEdit, onDelete }) {
   const [editingId, setEditingId] = useState(null);
   const [editText, setEditText] = useState('');
+  const [error, setError] = useState('');
 
   const startEdit = (task) => {
     setEditingId(task.id);
     setEditText(task.text);
+    setError('');
   };
 
   const handleEdit = (id) => {
+    if (!editText.trim()) {
+      setError('La tâche ne peut pas être vide.');
+      return;
+    }
     onEdit(id, editText);
     setEditingId(null);
     setEditText('');
+    setError('');
   };
 
-  if (!tasks) return <div>Aucune tâche pour ce jour.</div>;
+  if (!tasks || tasks.length === 0) return <div>Aucune tâche pour ce jour.</div>;
 
   return (
     <ul>
@@ -28,11 +36,13 @@ function TaskList({ tasks, onEdit, onDelete }) {
               <input value={editText} onChange={e => setEditText(e.target.value)} />
               <button onClick={() => handleEdit(task.id)}>Valider</button>
               <button onClick={() => setEditingId(null)}>Annuler</button>
+              {error && <span style={{ color: 'red', marginLeft: 8 }}>{error}</span>}
             </>
           ) : (
             <>
               <span>{task.text}</span>
-              <button onClick={() => startEdit(task)} style={{ marginLeft: 8 }}>Éditer</button>
+              <button onClick={() => startEdit(task)} style={{ marginLeft: 8 }}>
+Éditer</button>
               <button onClick={() => onDelete(task.id)} style={{ marginLeft: 8 }}>Supprimer</button>
             </>
           )}
@@ -43,7 +53,8 @@ function TaskList({ tasks, onEdit, onDelete }) {
 }
 
 const mapStateToProps = state => ({
-  tasks: state.selectedDay ? state.days[state.selectedDay] : []
+  tasks: state.selectedDay ? state.days[state.selectedDay] : [],
+  selectedDay: state.selectedDay
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
