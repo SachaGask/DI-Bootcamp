@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import plannerReducer from './plannerSlice';
+import postsReducer from '../posts/state/slice';
 
 const store = configureStore({
   reducer: {
-    planner: plannerReducer,
+    posts: postsReducer,
   },
 });
 
