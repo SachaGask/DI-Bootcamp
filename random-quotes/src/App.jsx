@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import quotes from "./quotes";
+import "./App.css";
 
 const getRandomIndex = (max, exclude) => {
   let index;
@@ -17,6 +18,10 @@ function App() {
   const [bgColor, setBgColor] = useState(getRandomColor());
 
   const changeQuote = () => {
+    if (quotes.length === 0) {
+      console.error("No quotes available");
+      return;
+    }
     const newIndex = getRandomIndex(quotes.length, index);
     setIndex(newIndex);
     setBgColor(getRandomColor());
@@ -30,36 +35,13 @@ function App() {
 
   return (
     <div
-      style={{
-        backgroundColor: bgColor,
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        transition: "0.4s",
-      }}
+      className="app-container"
+      style={{ "--bg-color": bgColor, "--text-color": bgColor }}
     >
-      <div style={{
-        background: "#fff",
-        padding: "2rem",
-        borderRadius: "12px",
-        textAlign: "center",
-        maxWidth: "600px"
-      }}>
-        <h1 style={{ color: bgColor }}>{current.quote}</h1>
-        <p style={{ fontWeight: "bold" }}>— {current.author}</p>
-        <button
-          onClick={changeQuote}
-          style={{
-            backgroundColor: bgColor,
-            color: "#fff",
-            border: "none",
-            padding: "0.5rem 1.5rem",
-            marginTop: "1rem",
-            cursor: "pointer",
-            borderRadius: "8px"
-          }}
-        >
+      <div className="quote-card">
+        <h1 className="quote-text">{current?.quote || "No quote available"}</h1>
+        <p className="quote-author">— {current?.author || "Unknown"}</p>
+        <button className="quote-button" onClick={changeQuote}>
           New Quote
         </button>
       </div>
