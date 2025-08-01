@@ -53,6 +53,7 @@
   justify-content: center;
   transition: background-color 0.4s ease;
   font-family: 'Georgia', serif;
+  padding: 1rem;
 }
 
 .error-container {
@@ -65,12 +66,41 @@
   border-radius: 15px;
   text-align: center;
   max-width: 600px;
+  width: 100%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  position: relative;
 }
 
 .quote-card:hover {
   transform: translateY(-5px);
+}
+
+.quote-card::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--bg-color);
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+
+.quote-card::after {
+  content: '"';
+  font-size: 4rem;
+  color: var(--bg-color);
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
 }
 
 .quote-text {
@@ -79,6 +109,9 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-style: italic;
+  font-weight: 400;
+  z-index: 1;
+  position: relative;
 }
 
 .quote-author {
@@ -86,6 +119,8 @@
   font-size: 1.1rem;
   color: #666;
   margin-bottom: 1.5rem;
+  z-index: 1;
+  position: relative;
 }
 
 .quote-button {
@@ -101,6 +136,8 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  z-index: 1;
+  position: relative;
 }
 
 .quote-button:hover {
@@ -108,13 +145,55 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.quote-button:focus {
+  outline: 2px solid var(--bg-color);
+  outline-offset: 2px;
+}
+
 .quote-counter {
   margin-top: 1rem;
   font-size: 0.9rem;
   color: #888;
+  z-index: 1;
+  position: relative;
 }
 
 .error-message {
   color: #dc3545;
   font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .quote-card {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .quote-text {
+    font-size: 1.2rem;
+  }
+  
+  .quote-card::before,
+  .quote-card::after {
+    font-size: 2rem;
+  }
+}
+
+/* Support pour les préférences d'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .app-container,
+  .quote-card,
+  .quote-button {
+    transition: none;
+  }
+  
+  .quote-card:hover {
+    transform: none;
+  }
+  
+  .quote-button:hover {
+    transform: none;
+  }
 }
