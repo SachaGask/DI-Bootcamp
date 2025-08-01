@@ -9,7 +9,15 @@ export const getRandomColor = () => {
   const hue = Math.floor(Math.random() * 360);
   const saturation = Math.floor(Math.random() * 50) + 50; // 50-100%
   const lightness = Math.floor(Math.random() * 30) + 35; // 35-65% pour un bon contraste
-  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+  const color = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+
+  // Vérification du contraste avec une couleur de texte blanche
+  const isContrastSufficient = (hue, saturation, lightness) => {
+    const luminance = (lightness / 100) * (saturation / 100);
+    return luminance > 0.5; // Exemple de seuil de contraste
+  };
+
+  return isContrastSufficient(hue, saturation, lightness) ? color : getRandomColor();
 };
 
 function App() {
