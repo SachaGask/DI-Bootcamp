@@ -44,38 +44,77 @@
   color: #888;
 }
 
+/* Styles pour le générateur de citations aléatoires React */
 .app-container {
   background-color: var(--bg-color);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.4s;
+  transition: background-color 0.4s ease;
+  font-family: 'Georgia', serif;
+}
+
+.error-container {
+  background-color: #f8f9fa;
 }
 
 .quote-card {
   background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
+  padding: 2.5rem;
+  border-radius: 15px;
   text-align: center;
   max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.quote-card:hover {
+  transform: translateY(-5px);
 }
 
 .quote-text {
   font-size: 1.5rem;
   color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-style: italic;
 }
 
 .quote-author {
   font-weight: bold;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
 }
 
 .quote-button {
   background-color: var(--bg-color);
   color: #fff;
   border: none;
-  padding: 0.5rem 1.5rem;
+  padding: 0.8rem 2rem;
   margin-top: 1rem;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.quote-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quote-counter {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 1.2rem;
 }
